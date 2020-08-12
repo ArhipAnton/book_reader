@@ -1,0 +1,14 @@
+{
+  "require": {
+    "php": ">=7.3",
+    "ext-mysqli": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Src\\": "Src/",
+      "Controller\\": "Controller/",
+      "Model\\": "Model/",
+      "View\\": "View/"
+    }
+  }
+}
