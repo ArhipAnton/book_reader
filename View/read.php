@@ -13,7 +13,8 @@
         <p>Страницы</p>
         <p>
         <?php for ($i = 1; $i <= $arg['pages']; $i++): ?>
-            <a href="#pf<?= $i ?>"><?= $i ?></a>
+                <a href="#pf<?= $i ?>"><?= $i ?></a>
+            <?php if($i%10==0):?></p><p><?php endif;?>
         <?php endfor; ?>
         </p>
     </div>
