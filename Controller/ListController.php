@@ -2,14 +2,14 @@
 
 namespace Controller;
 
-use Model\BookModel;
+use Model\BookAuthorModel;
 use Src\AbstractController;
 
 class ListController extends AbstractController
 {
     public function actionIndex($params = [])
     {
-        $list = (new BookModel())->getListWithAuthor();
+        $list = (new BookAuthorModel())->getListWithAuthor();
         $this->show('list',
             [
                 'list' => $list,
@@ -23,7 +23,7 @@ class ListController extends AbstractController
     {
         $book = $params['book'] ?? '';
         $author = $params['author'] ?? '';
-        $list = (new BookModel())->findByBookNameAndAuthorName($book, $author);
+        $list = (new BookAuthorModel())->findByBookNameAndAuthorName($book, $author);
         $this->show('list',
             [
                 'list' => $list,
