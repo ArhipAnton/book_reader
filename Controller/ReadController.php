@@ -21,6 +21,7 @@ class ReadController extends AbstractController
             [
                 'text' => $book[0]['text'],
                 'name' => $book[0]['name'],
+                'pages' => $book[0]['pages'],
             ]
         );
     }
